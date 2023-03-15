@@ -610,7 +610,7 @@ h4 {
   scrollbar-width: thin;
   -ms-overflow-style: thin;
   -moz-scrollbar-width: thin;
-  transform: translateX(50rem);
+  transform: translateX(0rem);
 }
 
 .music-list.active {
@@ -1282,6 +1282,9 @@ body, html {
   .youtube-btnClose {
     display: block;
   }
+  .youtube-API-container {
+    overflow: auto;
+  }
 }
 @media (min-width: 365px) and (max-width: 400px) {
   .youtube-search-api[data-visible=true] {
@@ -1290,5 +1293,8 @@ body, html {
   }
   .youtube-btnClose {
     left: 85%;
+  }
+  .youtube-API-container {
+    overflow: auto;
   }
 }/*# sourceMappingURL=main.css.map */
