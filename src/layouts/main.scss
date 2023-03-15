@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&family=Roboto+Mono:wght@700&display=swap');
+
+@import 'pomodoro-app';
+@import 'todo-app';
+@import 'utilities';
+@import 'playlist';
+
+
+*,*::after,*::before {
+    box-sizing: border-box;
+}
+body, html {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(25, 77, 119, 0.274);
+    background: url(../bg-image/lofi-shop.gif);
+    position: relative;
+}
+
+.flex-for-todo-app-pomodoro-app {
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    height: 100vh;
+    max-height: max-content;
+    width: inherit;
+    justify-content: center;
+    grid-template-columns: minmax(352px, 1fr) minmax(600px, 1fr) minmax(200px, 28rem);
+    grid-template-areas: 'pomodoro todo-app youtube-api'; width: 100%;
+    transition: 0.2s all;
+}
+.pomodoro_container {
+    grid-area: pomodoro;
+    align-self: baseline;
+    margin: 5rem 0rem 0rem 9rem;
+}
+
+.todo-app-container {
+    grid-area: todo-app;
+}
+.music-list-names-title {
+    margin-bottom: 0;
+}
+
+.youtube-search-api {
+    grid-area: youtube-api;
+    margin-left: auto;
+    align-self: center;
+    display: flex;
+    flex-shrink: unset;
+
+    .sidebar-btn {
+        outline: none;
+        border: none;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-top-left-radius: 40%;
+        border-bottom-left-radius: 40%;
+
+        .fa-arrow-left {
+            font-size: 1.125rem;
+        }
+    }
+    .sidebar-btn:hover, .sidebar-btn:active {
+        background-color: rgb(255 255 255 / 46%);
+    }
+}
+// Youtube API
+.youtube-API-container {
+    width: 100%;
+    height: 100vh;
+    padding: 0.55rem 1.257rem;
+    max-width: 25rem;
+    overflow: auto;
+    background-color:rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(0.2rem);
+    z-index: 999;
+    position: relative;
+
+    .youtube-btnClose {
+        position: absolute;
+        right: 0;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        top: 0;
+        font-size: 1.563rem;
+    }
+
+    .fa-youtube {
+        font-size: 2.2rem;
+        color: #FF0000;
+        position: relative;
+        z-index: 1;
+    }
+    .youtube-logo-color{
+        position: absolute;
+        background-color: white;
+        width: 0.938rem;
+        height: 0.938rem;
+        border-radius: 50%;
+        bottom: 30%;
+        right: 30%;
+        z-index: -1;
+    }
+    h1{
+        text-align: center;
+        font-size: 1.563rem;
+        margin: 0;
+        margin-bottom: 1rem;
+        color: white;
+        margin-top: 1rem;
+    }
+
+    #search-form {
+        align-items: center;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    #search-query {
+        width: 13.75rem;
+        padding: 0.625rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px 0 0 5px;
+    }
+    
+    #search-query:focus {
+        outline: none;
+    }
+    
+    button {
+        background-color: #252525;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 1rem;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        margin-left: -0.625rem
+    }
+    
+    #results {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .video {
+        margin: 10px;
+        max-width: 18.75rem;
+        border: 1px solid #ddd;
+        background-color: rgba(255, 255, 255, 0.801);
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+    }
+    .video img {
+        max-width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    .video h2 {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+    .video p {
+        font-size: 0.875rem;
+        margin: 5px 0;
+    }
+
+}
+.youtube-btnClose {
+    display: none;
+}
+// youtube sidebar
+.youtube-search-api{
+    transform: translateX(91.5%);
+    transition: all .5s;
+}
+.youtube-search-api[data-visible="true"] {
+    transform: translateX(0%);
+    transition: all .5s;
+}
+.sidebar-btn {
+    align-self: center;
+}
+.sidebar-btn[aria-expanded="true"] {
+    align-self: center;
+}
+// youtube scroll
+.youtube-API-container::-webkit-scrollbar {
+    width: 10px;
+}
+  
+.youtube-API-container::-webkit-scrollbar-track {
+    background-color: #171717;
+    border-radius: 10px;
+}
+  
+.youtube-API-container::-webkit-scrollbar-thumb {
+    background-color: #333333;
+    border-radius: 10px;
+}
+  
+.youtube-API-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555555;
+}
+  
+  /* Firefox */
+.youtube-API-container {
+    scrollbar-width: thin;
+    scrollbar-color: #333333 #171717;
+}
+  
+  .youtube-API-container::-moz-scrollbar {
+    width: 10px;
+}
+  
+.youtube-API-container::-moz-scrollbar-track {
+    background-color: #171717;
+    border-radius: 10px;
+}
+  
+.youtube-API-container::-moz-scrollbar-thumb {
+    background-color: #333333;
+    border-radius: 10px;
+}
+  
+.youtube-API-container::-moz-scrollbar-thumb:hover {
+    background-color: #555555;
+}
+  
+  /* Edge */
+.youtube-API-container::-ms-scrollbar {
+    width: 10px;
+}
+  
+ .youtube-API-container::-ms-scrollbar-track {
+    background-color: #171717;
+    border-radius: 10px;
+}
+  
+  .youtube-API-container::-ms-scrollbar-thumb {
+    background-color: #333333;
+    border-radius: 10px;
+}
+  
+  .youtube-API-container::-ms-scrollbar-thumb:hover {
+    background-color: #555555;
+}
+
+// Media query
+
+@media (max-width: 1900px) {
+    .youtube-search-api {
+        margin: 0;
+        position: fixed;
+        right: 0;
+    }
+}
+@media (max-width: 1550px) {
+    .pomodoro_container {
+        margin-left: 1rem;
+    }
+}
+@media (max-width: 1415px) {
+    .todo-app-container{
+        margin-left: 10rem;
+    }
+}
+@media (max-width: 1120px) {
+    .pomodoro_container {
+        margin-left: 6rem;
+    }
+}
+@media (max-width: 1000px) {
+    .sidebar-btn {
+        align-self:flex-start;
+        margin-top: 5rem;
+    }
+    .sidebar-btn[aria-expanded="true"] {
+        align-self:flex-start;
+        margin-top: 5rem;
+    }
+    .pomodoro_container {
+        margin-top: 2rem;
+    }
+    .todo-app-container {
+        margin-left: 0;
+    }
+}
+@media (min-width: 365px) and (max-width: 999px) {
+    .flex-for-todo-app-pomodoro-app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .pomodoro_container {
+        max-height: 21.875rem;
+        align-self: center;
+        margin-left: 0;
+        margin-top: -10rem;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 667px) {
+    .flex-for-todo-app-pomodoro-app {
+        gap: 0.5rem;
+    }
+    .todo-app-container {
+        max-height: 350px;
+    }
+}
+@media (min-width: 365px) and (max-width: 500px) {
+    .text {
+        width: 8rem;
+    }
+}
+@media (min-width: 365px) and (max-width: 600px) {
+    .text{
+        width: 80%;
+    }
+}
+@media (min-width: 650px) and (max-width: 1000px) {
+    .todo-app-container {
+        max-height: 400px;
+    }
+}
+@media (max-width: 1170px) {
+    #musiclistBtn {
+        margin-left: 0;
+        padding-top: 0;
+    }
+    .playlist-button-container {
+        margin-left: 0;
+        width: 50%;
+    }
+    .volume-container {
+        margin-top: -1.3rem;
+    }
+    
+}
+@media (min-width: 365px) and (max-width: 680px) {
+    .volume-container {
+        display: none;
+    }
+    .title-container {
+        padding-top: 0.4rem;    
+       
+        #title {
+            font-size: 12px;
+        }
+    }
+    .youtube-search-api[data-visible="true"] {
+        .sidebar-btn[aria-expanded="true"] {
+            display: none;
+        }
+    }
+    .youtube-btnClose {
+        display: block;
+    }   
+}
+@media (min-width: 365px) and (max-width: 400px) {
+    .youtube-search-api[data-visible="true"] {
+        transform: translateX(5%);
+        transition: all .5s;
+    }
+    .youtube-btnClose {
+        left: 85%;
+    }
+}
