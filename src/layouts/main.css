@@ -1223,6 +1223,9 @@ body, html {
     margin-left: 0;
     margin-top: -2rem;
   }
+  body {
+    overflow: auto;
+  }
 }
 @media (min-width: 375px) and (max-width: 667px) {
   .flex-for-todo-app-pomodoro-app {
