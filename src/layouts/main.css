@@ -1000,6 +1000,8 @@ body, html {
           backdrop-filter: blur(0.2rem);
   z-index: 999;
   position: relative;
+  max-height: -moz-fit-content;
+  max-height: fit-content;
 }
 .youtube-API-container .youtube-btnClose {
   position: absolute;
