@@ -83,7 +83,7 @@ body, html {
     backdrop-filter: blur(0.2rem);
     z-index: 999;
     position: relative;
-    max-height: max-content;
+    max-height: 100vh;
 
     .youtube-btnClose {
         position: absolute;
