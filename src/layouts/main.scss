@@ -303,17 +303,14 @@ body, html {
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
+        overflow: auto;
+        min-height: fit-content;
     }
     .pomodoro_container {
         max-height: 21.875rem;
         align-self: center;
         margin-left: 0;
         margin-top: -2rem;
-    }
-     body {
-         overflow: auto;
-         min-height: fit-content;
-         
     }
 }
 
