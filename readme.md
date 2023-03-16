@@ -53,4 +53,5 @@ This to-do list utilizes local storage to persist tasks across page reloads, and
 
 # Pomodoro App
 
+Pomodoro is used for studying to set a time for your sessions and breaks. You can have deep work for 25 minutes then after that you'll get 5mins break every session. It is used for time management for students to study throughout the day.
 

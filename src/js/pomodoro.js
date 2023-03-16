@@ -40,6 +40,22 @@ const iconPause = document.querySelector(".fa-pause-pmdr");
 // icons
 const playBoop = document.querySelector('.playBoop');
 
+let isPageVisible = true;
+
+document.addEventListener("visibilitychange", function() {
+  isPageVisible = !isPageVisible;
+
+  if (isPageVisible) {
+    mycountDown = setInterval(() => {
+      countDown();
+    }, 1000);
+  } else {
+    clearInterval(mycountDown);
+  }
+});
+
+
+
 for (let i = 0; i < all_Buttons.length; i++) {
     all_Buttons[i].addEventListener("click", function() {
         all_Buttons[i].classList.add("active");
@@ -47,19 +63,9 @@ for (let i = 0; i < all_Buttons.length; i++) {
     })
 }
 
-window.onload = function() {
-  var timerState = JSON.parse(localStorage.getItem("timerState"));
-  if (timerState) {
-    minutesTimeLeftValue = timerState.minutes;
-    secondsTimeLeftValue = timerState.seconds;
-    breakStart = timerState.breakStart;
-    // start the timer with the restored state
-    mycountDown = setInterval(() => {
-      countDown();
-    }, 1000);
-  }
-  resetValues();
-}
+window.onload = function () {
+    resetValues();
+  };
 
   function resetValues() {
     if (mycountDown !== undefined) clearInterval(mycountDown);
@@ -143,27 +149,17 @@ reset.addEventListener("click", resetValues);
 play_Pause.addEventListener("click", startStopTimer);
 
 function startStopTimer() {
-  timer_active = !timer_active;
+    timer_active = !timer_active;
 
-  if (timer_active) {
-    // store the current state of the timer in localStorage
-    localStorage.setItem("timerState", JSON.stringify({
-      minutes: minutesTimeLeftValue,
-      seconds: secondsTimeLeftValue,
-      breakStart: breakStart
-    }));
+    if (timer_active) {
+        mycountDown = setInterval(() => {
+            countDown();
+        }, 1000);
+    } else {
+        clearInterval(mycountDown);
+    }
+    playBoop.play()
 
-    mycountDown = setInterval(() => {
-      countDown();
-    }, 1000);
-  } else {
-    clearInterval(mycountDown);
-
-    // clear the localStorage item when the timer is stopped
-    localStorage.removeItem("timerState");
-  }
-
-  playBoop.play();
 }
 play_Pause.addEventListener("click", () => {
 
