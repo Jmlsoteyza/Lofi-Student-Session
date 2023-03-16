@@ -48,6 +48,6 @@ This to-do list is implemented using JavaScript, and utilizes the DOM to manipul
 
 <li style="margin-left: -3rem;"> Finally, a "clear all" button is created which removes all tasks from the page and clears the local storage. A brief opacity transition is applied when the "delete" and "clear all" buttons are clicked for a smoother user experience.
 </ul>
-<br>
+
 This to-do list utilizes local storage to persist tasks across page reloads, and JSON is used to store and retrieve the data in a format that can be easily manipulated in JavaScript.
 
