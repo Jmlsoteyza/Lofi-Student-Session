@@ -7,9 +7,13 @@ Here's the link of the live site: https://studentstudysession.vercel.app/
 
 ## The following languages I used:
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1024px-HTML5_logo_and_wordmark.svg.png" alt= “” width="50px" height="50px">
-<img src="https://sass-lang.com/assets/img/styleguide/seal-color-aef0354c.png" alt= “” width="50px" height="45px" style="padding-left: 5px;">
-<img src="https://www.freepnglogos.com/uploads/javascript-png/javascript-shield-logo-icon-2.png" alt= “” width="55px" height="55px" style="padding-left: 5px;">
+<img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" width="50">
+&nbsp;
+<img src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" width="50">
+&nbsp;
+<img src="https://user-images.githubusercontent.com/25181517/192158956-48192682-23d5-4bfc-9dfb-6511ade346bc.png" width="45">
+&nbsp;
+  <img src="https://user-images.githubusercontent.com/25181517/117447155-6a868a00-af3d-11eb-9cfe-245df15c9f3f.png" width="50">
 
 ## 
 <img src="src\bg-image\Student pomodoro img.JPG" alt= “” >
