@@ -148,6 +148,7 @@ function updateProgress(e) {
         durationSec = `0${durationSec}`;
         musicDurationTime.innerText = `${durationMin}:${durationSec}`;
     }
+    
 }
 
 
@@ -155,6 +156,7 @@ function setProgress(e) {
     const width = this.clientWidth;
     const clickX = e.offsetX;
     const duration = audio.duration;
+    
 
     audio.currentTime = (clickX / width) * duration;
 }
@@ -256,6 +258,10 @@ volumeIcon.addEventListener('click', () => {
       audio.volume = 0;
       volumeInput.value = 0
     }
+  });
+  
+  audio.addEventListener('ended', () => {
+    nextsongs();
   });
   
 

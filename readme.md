@@ -53,5 +53,11 @@ This to-do list utilizes local storage to persist tasks across page reloads, and
 
 # Pomodoro App
 
-Pomodoro is used for studying to set a time for your sessions and breaks. You can have deep work for 25 minutes then after that you'll get 5mins break every session. It is used for time management for students to study throughout the day.
+Pomodoro is a study technique that involves setting a timer for your sessions and breaks. You can do deep work for 25 minutes and then take a 5-minute break at the end of each session. It is used to help students manage their time so that they can study throughout the day.
+
+It's worth noting that the Pomodoro technique may not work for everyone. Some people may find it too rigid or restrictive, while others may need longer or shorter work and break intervals. Ultimately, the key to success with any study technique is finding what works best for you and your learning style.
+
+### Function description of Pomodoro App:
+
+
 
