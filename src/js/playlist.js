@@ -260,10 +260,10 @@ volumeIcon.addEventListener('click', () => {
     }
   });
   
-  audio.addEventListener('ended', () => {
-    nextsongs();
-  });
-  
+audio.addEventListener('ended', () => {
+  nextsongs();
+});
+
 
 volumeInput.addEventListener('input', volumeAudio);
 audio.addEventListener('volumechange', updateVolumeIcon);

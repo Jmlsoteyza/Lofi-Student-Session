@@ -58,6 +58,14 @@ Pomodoro is a study technique that involves setting a timer for your sessions an
 It's worth noting that the Pomodoro technique may not work for everyone. Some people may find it too rigid or restrictive, while others may need longer or shorter work and break intervals. Ultimately, the key to success with any study technique is finding what works best for you and your learning style.
 
 ### Function description of Pomodoro App:
+<ul style="text-align: left;">
+<li style="margin-left: -3rem;">The Pomodoro App is designed to help users manage their time more efficiently. To create the app, I first defined the values for the seconds and minutes that make up the break and session lengths. Next, I set up the relevant elements on the page using their IDs or classes. To do this, I used a for loop to call all of the buttons in the arrays.
+
+<li style="margin-left: -3rem;">Once I had set up the elements on the page, I retrieved the values I needed from the DOM and put them together in a function. Within this function, I added event listeners for the break and session buttons, which allow users to increment or decrement the length of each session.
+
+<li style="margin-left: -3rem;">In addition to these basic features, I also included a setTimerValue() function that automatically switches the app from session mode to break mode when the session is complete. Finally, I created a startStopTimer() function that tracks the active status of the timer and counts down the seconds using the setInterval method when the timer is active.
+</ul>
 
 
+# Music Player
 

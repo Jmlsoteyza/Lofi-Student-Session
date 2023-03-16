@@ -40,6 +40,9 @@ const iconPause = document.querySelector(".fa-pause-pmdr");
 // icons
 const playBoop = document.querySelector('.playBoop');
 
+
+
+
 for (let i = 0; i < all_Buttons.length; i++) {
     all_Buttons[i].addEventListener("click", function() {
         all_Buttons[i].classList.add("active");
@@ -133,18 +136,21 @@ reset.addEventListener("click", resetValues);
 play_Pause.addEventListener("click", startStopTimer);
 
 function startStopTimer() {
-    timer_active = !timer_active;
+  timer_active = !timer_active;
 
-    if (timer_active) {
-        mycountDown = setInterval(() => {
-            countDown();
-        }, 1000);
-    } else {
-        clearInterval(mycountDown);
-    }
-    playBoop.play()
-
+  
+  if (timer_active) {
+    mycountDown = setInterval(() => {
+      countDown();
+    }, 1000);
+    document.visibilityState = 'visible';
+  } else {
+    clearInterval(mycountDown);
+    document.visibilityState = 'hidden';
+  }
+  playBoop.play();
 }
+
 play_Pause.addEventListener("click", () => {
 
     if (iconPlay.style.visibility !== 'hidden') {
