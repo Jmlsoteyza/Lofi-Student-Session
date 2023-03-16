@@ -47,9 +47,19 @@ for (let i = 0; i < all_Buttons.length; i++) {
     })
 }
 
-window.onload = function () {
-    resetValues();
-  };
+window.onload = function() {
+  var timerState = JSON.parse(localStorage.getItem("timerState"));
+  if (timerState) {
+    minutesTimeLeftValue = timerState.minutes;
+    secondsTimeLeftValue = timerState.seconds;
+    breakStart = timerState.breakStart;
+    // start the timer with the restored state
+    mycountDown = setInterval(() => {
+      countDown();
+    }, 1000);
+  }
+  resetValues();
+}
 
   function resetValues() {
     if (mycountDown !== undefined) clearInterval(mycountDown);
@@ -133,17 +143,27 @@ reset.addEventListener("click", resetValues);
 play_Pause.addEventListener("click", startStopTimer);
 
 function startStopTimer() {
-    timer_active = !timer_active;
+  timer_active = !timer_active;
 
-    if (timer_active) {
-        mycountDown = setInterval(() => {
-            countDown();
-        }, 1000);
-    } else {
-        clearInterval(mycountDown);
-    }
-    playBoop.play()
+  if (timer_active) {
+    // store the current state of the timer in localStorage
+    localStorage.setItem("timerState", JSON.stringify({
+      minutes: minutesTimeLeftValue,
+      seconds: secondsTimeLeftValue,
+      breakStart: breakStart
+    }));
 
+    mycountDown = setInterval(() => {
+      countDown();
+    }, 1000);
+  } else {
+    clearInterval(mycountDown);
+
+    // clear the localStorage item when the timer is stopped
+    localStorage.removeItem("timerState");
+  }
+
+  playBoop.play();
 }
 play_Pause.addEventListener("click", () => {
 

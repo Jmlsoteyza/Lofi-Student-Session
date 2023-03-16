@@ -30,13 +30,13 @@ Here's the link of the live site: https://studentstudysession.vercel.app/
 
 <p>It allows you to increase your productivity by preventing you from forgetting things, assisting you in prioritizing tasks, managing tasks effectively, using time wisely, and improving your time management and workflow.</p>
 
-## What's the benefits of Todo App list?
+### What's the benefits of Todo App list?
 
 The to-do app will help you stay organized, which is one of the most important reasons to use it. It will be easier to manage if you make a list of all your tasks. It helps you stay focused after you've completed all of your tasks. while creating mental space for other creative tasks or ideas.
 
 When you have completed the task, just simply click the checkbox button, it will give you a sense of accomplishment and motivate you to move on to the next task.
 
-## Function description:
+### Function description of Todo App:
 
 This to-do list is implemented using JavaScript, and utilizes the DOM to manipulate the HTML elements on the page.
 <ul style="text-align: left;">
@@ -50,4 +50,7 @@ This to-do list is implemented using JavaScript, and utilizes the DOM to manipul
 </ul>
 
 This to-do list utilizes local storage to persist tasks across page reloads, and JSON is used to store and retrieve the data in a format that can be easily manipulated in JavaScript.
+
+# Pomodoro App
+
 
