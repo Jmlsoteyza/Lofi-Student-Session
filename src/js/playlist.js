@@ -191,12 +191,6 @@ function updateVolumeIcon() {
 
 
 
-
-
-
-
-
-
 for (let i = 0; i < songs.length; i++) {
     let musicListNames = `<div data-index="${i}" class="music-list-names">
                 <img class="music-list-images" src="images/${songs[i].image}.jpg" alt="">
@@ -247,12 +241,6 @@ function toggleMusicList() {
   musiclist.classList.toggle('active');
   musicCloseBtn.classList.toggle('active');
 }
-
-
-
-
-
-
 
 
 volumeIcon.addEventListener('click', () => {
