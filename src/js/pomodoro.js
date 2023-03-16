@@ -40,22 +40,6 @@ const iconPause = document.querySelector(".fa-pause-pmdr");
 // icons
 const playBoop = document.querySelector('.playBoop');
 
-let isPageVisible = true;
-
-document.addEventListener("visibilitychange", function() {
-  isPageVisible = !isPageVisible;
-
-  if (isPageVisible) {
-    mycountDown = setInterval(() => {
-      countDown();
-    }, 1000);
-  } else {
-    clearInterval(mycountDown);
-  }
-});
-
-
-
 for (let i = 0; i < all_Buttons.length; i++) {
     all_Buttons[i].addEventListener("click", function() {
         all_Buttons[i].classList.add("active");
