@@ -17,7 +17,7 @@ Here's the link of the live site: https://studentstudysession.vercel.app/
 <br>
 <img src="src\bg-image\Student pomodoro img.JPG" alt= “” >
 
-## List of applications
+## List of applications:
 
 <ul style="text-align: left;">
 <li style="margin-left: -3rem;">Todo App</li>
@@ -69,3 +69,27 @@ It's worth noting that the Pomodoro technique may not work for everyone. Some pe
 
 # Music Player
 
+I have created a music player that includes pomodoro and to-do apps to enhance the user's studying or work experience. The music player is designed to provide a relaxing atmosphere, enabling the user to focus better while studying or working on their tasks. Additionally, the player has a variety of music options that can help to set the user's mood according to their preference, making the experience more personalized. By using this music player, the user can expect to feel calmer, more motivated, and focused, which can lead to increased productivity and better overall results. 
+
+### Function description of Music Player:
+
+<ul style="text-align: left;">
+<li style="margin-left: -3rem;">This app is designed to provide a calming experience to users while they study or work on their tasks. To create the music player, I first set up the necessary elements from the DOM to obtain the required values. Once the buttons and values were set up, I created an array of songs with information on the song, singer, and images. Next, I set a loop using a variable called musicSongIndex, which I later called using the function songIn.
+
+<li style="margin-left: -3rem;">The code also includes event listeners for the play button, volume input, and progress container. When the play button is clicked, the code checks if the audio is paused and either plays or pauses the audio accordingly. The volume input is used to adjust the volume of the audio when the value is changed. The progress container is used to update the progress of the song and allows the user to skip to a specific point in the song. Additionally, I use variables such as duration, current time, clientWidth, and e.offsetX to track the progress of the current song in the music player.
+
+<li style="margin-left: -3rem;">Finally, I created a music list using the insertAdjacentHTML method to remove the code in the HTML file, and a for loop to iterate over an array of songs.
+</ul>
+
+# Youtube Search API
+
+I developed a YouTube search API to allow users to customize music while browsing the website, eliminating the need for them to go to YouTube, and if they aren't satisfied with the music player, they can simply dive into the YouTube side bar. It will also make browsing YouTube easier for the user, as they will simply click the sidebar button to search for what they are looking for.
+
+### Function description of Youtube API:
+<ul style="text-align: left;">
+<li style="margin-left: -3rem;">The function for the YouTube API has been designed to make it easy for users to search for videos directly from the mobile version of the webpage. This has been achieved by implementing a sidebar button that toggles the YouTube search container when clicked. The button is styled using the aria-expanded and data-visible attributes of the DOM, and the CSS translateX property to shift the container from 100% to 0. This allows the container to slide in and out of view smoothly. The button is also set to listen for click events, so that it can toggle the container accordingly.
+
+<li style="margin-left: -3rem;">The YouTube API function itself is responsible for fetching the search results from the YouTube Data API using the user's search query. It then maps the results to a simplified object structure that contains the video title, description, thumbnail, video ID, and channel title. The function then passes this object to the displayResults() function, which creates the necessary HTML elements to display the search results on the page. Finally, the function adds an event listener to each video link, so that when a user clicks on a video, the displayResults() function replaces the search results with an embedded YouTube video player for that video.
+
+<li style="margin-left: -3rem;">I obtained the YouTube API by accessing the documentation at https://developers.google.com/youtube/v3/docs/?apix=true. From there, I requested the YouTube data v3 API, which allowed me to retrieve search results based on the user's search query.
+</ul>
